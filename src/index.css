@@ -19,3 +19,7 @@ body,
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
+.vertical_ {
+  text-orientation: mixed;
+  writing-mode: vertical-lr;
+}

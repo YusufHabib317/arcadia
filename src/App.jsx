@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <Landing />
-      <SectionTwo navRef={navRef} />
-      <SectionThree />
+      <SectionTwo />
+      <SectionThree navRef={navRef} />
       <SectionFour navRef={navRef} />
       <Footer navRef={navRef} />
     </>

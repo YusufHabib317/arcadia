@@ -1,26 +1,30 @@
-import { PiPlantFill } from "react-icons/pi";
-
+import Group from "../assets/Group 23.svg";
 const Scroll = ({ navRef, label, vertical = false }) => {
-  return (
-    <>
-      <div className="relative h-[100px] cursor-pointer">
-        <PiPlantFill
-          className={`absolute bottom-[-13px] right-[1px] rotate-180
-          ${vertical && "top-[-30px] right-[4px]"}
-          `}
-        />
-        <div className="bg-black w-[1px] h-full" />
+  if (vertical) {
+    return (
+      <div className="relative rotate-180 cursor-pointer mt-3 h-[5rem]">
         <p
-          className={`vertical absolute top-[-30px] right-[4px] text-[1rem] font-normal
-          ${vertical && "bottom-[-13px] right-[1px]"}
-          
-          `}
+          className={`vertical_ mt-[-0.75rem] absolute top-[-86%] right-[-125%] text-[0.85rem] font-normal`}
           onClick={() => navRef.current.scrollIntoView({ behavior: "smooth" })}
         >
           {label}
         </p>
+
+        <img src={Group} className="object-cover" />
       </div>
-    </>
+    );
+  }
+  return (
+    <div className="relative cursor-pointer mt-3 h-[5rem]">
+      <p
+        className={`vertical mt-[-0.75rem] absolute top-[-26px] right-[-2px] text-[0.85rem] font-normal`}
+        onClick={() => navRef.current.scrollIntoView({ behavior: "smooth" })}
+      >
+        {label}
+      </p>
+
+      <img src={Group} className="object-cover" />
+    </div>
   );
 };
 

@@ -1,16 +1,8 @@
-import Container from "../../ui/Container";
-import plant from "../../assets/Rectangle 19.png";
 import Scroll from "../../ui/Scroll";
 
 const SectionTwo = ({ navRef }) => {
   return (
-    <div className="py-16 relative">
-      <div className="absolute w-[16em] left-[50%] translate-x-[-50%] bottom-[-40px] sm:bottom-[-5] sm:left-[85%]">
-        <img src={plant} alt="photo" />
-        <div className="absolute bottom-0 left-[-10px]">
-          <Scroll navRef={navRef} label="Lorem Ipsum" vertical />
-        </div>
-      </div>
+    <div className="pt-16 relative">
       <div className="absolute top-5 right-0 w-[16em] text-[0.7rem] text-[#B59369]">
         <p>
           Lorem ipsum dolor sit amet,
@@ -26,7 +18,7 @@ const SectionTwo = ({ navRef }) => {
         Lorem ipsum dolor sit amet
       </p>
 
-      <Container>
+      <div className="mx-auto px-4 sm:px-2 xl:px-20 md:px-[15rem] md:py-[2rem]">
         <div
           className="bg-section bg-cover bg-no-repeat w-full h-full flex flex-col justify-center items-center
         py-[5rem]
@@ -51,7 +43,7 @@ const SectionTwo = ({ navRef }) => {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };
